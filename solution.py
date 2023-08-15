@@ -4,9 +4,9 @@ def count_ips(filename):
     #open the file in read-only ('r')
     #use with-statement to automatically close the file/release memory after operation
     with open(filename, 'r') as file: 
-        myIps_list = [line.strip().split('- -')[0] for line in file]
+        myIps_list = [line.strip().split('- -')[0] for line in file] # For-Loop in one line: List Comprehension Syntax (https://www.w3schools.com/python/python_lists_comprehension.asp, https://betterprogramming.pub/4-ways-to-write-one-liner-for-loops-in-python-e8c1db903ce2). Get IPs from file
         myIps_set = set(myIps_list) #gives unique values
-        my_dict = {i:myIps_list.count(i) for i in myIps_list} # counts number of ip calls per ip adress and assigns count-value to ip-address key
+        my_dict = {i:myIps_list.count(i) for i in myIps_list} # For-Loop in one line: Dictionary Comprehensions Syntax, counts number of ip calls per ip adress and assigns count-value to ip-address key (https://www.geeksforgeeks.org/python-dictionary-comprehension/, https://betterprogramming.pub/4-ways-to-write-one-liner-for-loops-in-python-e8c1db903ce2)
 
         return my_dict
 
