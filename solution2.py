@@ -28,7 +28,8 @@ class Dictionary():
 
 d=Dictionary()
 d.newentry("Apple", "fruit")
-d.newentry("Banana", "fruit")
+g=d.newentry("Banana", "fruit")
+print(type(d))
 
 d.look("Banana")
 

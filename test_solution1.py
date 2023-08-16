@@ -1,5 +1,5 @@
 import pytest
-from solution import count_ips
+from solution1 import count_ips
 #run test with pytest test_solution.py
 
 @pytest.fixture
