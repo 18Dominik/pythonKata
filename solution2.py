@@ -13,6 +13,7 @@
 
 class Dictionary():
     dic = {}
+
     def newentry(self, fruit, description):
         self.dic[fruit] = description
 
@@ -20,18 +21,17 @@ class Dictionary():
         objlist = list(self.dic.keys())
         if fruit in objlist:
             print("Yes", fruit, "is in the dictionary!")
+            
         else:
             print("No", fruit, "is Not in the dictionary!")
+            
 
+z=Dictionary()
+z.newentry("Cherrygum", "fruit")
+print(type(z))
 
-        
-
-d=Dictionary()
-d.newentry("Apple", "fruit")
-g=d.newentry("Banana", "fruit")
-print(type(d))
-
-d.look("Banana")
+z.look("Banana")
+print(z.dic)
 
 
 

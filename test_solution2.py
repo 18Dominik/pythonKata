@@ -4,14 +4,21 @@ from solution2 import Dictionary
 
 @pytest.fixture
 def call_newentry():
-    d=Dictionary()
-    #a= d.newentry("Apple", "fruit")
-    return d
+    t=Dictionary()
+    a= t.newentry("Cherry", "fruit")
+    return t
 
 
 def test_returned_dict(call_newentry):
     output = call_newentry
-    assert isinstance(output, Dictionary)
+    assert isinstance(output.dic, dict)
+
+def test_newentry(call_newentry):
+    output = call_newentry
+    assert list(output.dic.keys())[1] == "Cherry"
+    assert list(output.dic.values())[1] == "fruit"
+
+
 
 
 
