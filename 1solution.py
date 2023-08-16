@@ -1,3 +1,4 @@
+#Task: Retrieve IP adresses from logfile and count for each IP adress who many times it appears in the logfile. Save the answer in a dictionary. 
 def count_ips(filename):
     #create an empty dictionary 
     file_list=[]
